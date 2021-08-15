@@ -1,0 +1,7 @@
+.catalog-page {
+  #sidebar-first {
+    @include media-breakpoint-down(lg) {
+      position: static;
+    }
+  }
+}

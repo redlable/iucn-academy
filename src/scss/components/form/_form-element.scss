@@ -1,0 +1,17 @@
+.form-item {
+  &:not(.fieldgroup) {
+    margin-bottom: rem(10);
+  }
+
+  &:focus-within {
+    .form-text {
+      border-color: $clr-blue;
+      color: $clr-blue;
+    }
+
+    ~ .form-submit {
+      background-image: url(../images/design/search-blue.svg);
+      border-color: $clr-blue;
+    }
+  }
+}

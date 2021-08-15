@@ -1,0 +1,128 @@
+.private-message-thread {
+  // Display mode: Preview.
+  $top-offset: 16;
+
+  &-preview {
+   font-size: rem($font-size-sm);
+    position: relative;
+    padding-top: rem($top-offset);
+
+    .field--name {
+      &-message {
+        font-weight: $font-weight-light;
+      }
+    }
+
+    // Private message.
+    .private-message-thread_preview {
+      .contextual-region {
+        position: static;
+      }
+
+      .field--name {
+        &-created {
+          position: absolute;
+          right: 0;
+          top: rem(-$top-offset);
+        }
+      }
+
+      // @todo: Remove it after change to correct formatter - Plain text.
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  // Display mode: Full.
+  &-full {
+    .private-message-thread--header {
+      position: relative;
+      padding: rem(40) rem(100) rem(60) rem(50);
+      background-color: $clr-theme-secondary;
+      font-size: rem($font-size-sm);
+      margin-bottom: rem(30);
+
+      &:before {
+        //@todo: Added mixins or class for decoration element.
+        content: '';
+        display: block;
+        width: rem(120);
+        position: absolute;
+        left: rem(50);
+        bottom: rem(30);
+        border-bottom: 1px solid $clr-content-text;
+      }
+    }
+
+    .field--name-field-pm-subject,
+    .private-message-recipients {
+      div {
+        display: inline;
+      }
+
+      .field__label {
+        &:after {
+          content: ': ';
+        }
+      }
+    }
+
+    .private_message_thread_delete_link_wrapper {
+      a {
+        @include icon-opigno(trash, before);
+        display: block;
+        width: rem(40);
+        height: rem(40);
+        position: absolute;
+        top: 50%;
+        right: rem(50);
+        transform: translateY(-50%);
+        overflow: hidden;
+        font-size: rem(36);
+        text-indent: 101%;
+        text-decoration: none;
+        white-space: nowrap;
+        color: inherit;
+
+        &:hover {
+          color: $clr-content-link-active;
+        }
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .private-message-wrapper {
+      @include clearfix();
+    }
+
+    .private-message {
+      width: 80%;
+      background-color: $clr-theme-secondary;
+      padding: rem(25) rem(50) rem(50);
+      margin-bottom: rem(30);
+
+      &.private-message-author-self {
+        float: right;
+      }
+    }
+
+    .field--name {
+      &-message {
+        p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-field-pm-subject {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,402 @@
+// Views grid
+.view-opigno-training-catalog {
+  padding-bottom: rem(50);
+  position: relative;
+
+  .view-style {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: rem(13);
+    transform: translateY(-7px);
+    position: relative;
+    z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 0 0 20px;
+      padding: 0;
+    }
+
+    .btn.line,
+    .btn.block {
+      background: none;
+      font-size: rem(24);
+      min-height: 0;
+      min-width: 0;
+      padding: 0;
+
+      &:hover {
+        box-shadow: none;
+        transform: none;
+      }
+
+      &.block {
+        display: none;
+      }
+    }
+  }
+
+  // Block view
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 0 rem(-9);
+  }
+
+  .not-take-link-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .views-row {
+    border-radius: rem(10);
+    box-shadow: 0 3px 6px rgba($clr-black, .3);
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(33.333% - 18px);
+    max-width: calc(33.333% - 18px);
+    margin: 0 rem(9) rem(18);
+    overflow: hidden;
+    position: relative;
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 calc(50% - 18px);
+      max-width: calc(50% - 18px);
+      margin-bottom: rem(40);
+    }
+
+    @media screen and (max-width: 480px) {
+      flex: 0 0 calc(100% - 18px);
+      max-width: calc(100% - 18px);
+    }
+  }
+
+  .fields-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+
+  .category__yellow {
+    border-bottom: rem(10) solid $clr-yellow;
+  }
+
+  .category__blue {
+    border-bottom: rem(10) solid $clr-blue;
+  }
+
+  .category__green {
+    border-bottom: rem(10) solid $clr-green-forest;
+  }
+
+  .views-field-field-learning-path-media-image {
+    border-radius: rem(10) rem(10) 0 0;
+    overflow: hidden;
+  }
+
+  .body-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: rem(13) rem(10) rem(10) rem(20);
+
+    .views-field-label {
+      h6 {
+        font-size: rem(19);
+
+        @include media-breakpoint-down(md) {
+          color: $clr-navy;
+          font-size: rem(14);
+        }
+      }
+    }
+  }
+
+  .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .progress-wrapper {
+    align-items: flex-end;
+    display: flex;
+  }
+
+  .views-field-opigno-lp-take-link {
+    display: flex;
+    margin-top: rem(20);
+    margin-left: auto;
+
+    .btn {
+      border-radius: rem(5);
+      padding: rem(6) rem(25);
+      min-height: rem(30);
+      min-width: 0;
+      z-index: 1;
+    }
+  }
+
+  // Line view
+  &.style-line {
+    margin: 0;
+
+    .view-style {
+      .btn {
+        &.block {
+          display: block;
+        }
+
+        &.line {
+          display: none;
+        }
+      }
+    }
+
+    .view-content {
+      margin: 0;
+    }
+
+    .views-row {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 0 rem(18);
+
+      &:hover {
+        .top-wrapper {
+          transform: none;
+        }
+      }
+    }
+
+    .fields-content {
+      flex-direction: row;
+    }
+
+    .top-wrapper {
+      flex: 0 0 rem(206);
+      max-width: rem(206);
+      position: static;
+      z-index: 0;
+
+      .views-field-label {
+        display: none;
+      }
+    }
+
+    .body-wrapper {
+      flex-direction: row;
+      margin: 0;
+      padding: rem(18) rem(20) rem(16) rem(16);
+    }
+
+    .text-wrapper {
+      display: block;
+      flex: 0 0 64%;
+      max-width: 64%;
+      padding: 0;
+      position: static;
+
+      > .status {
+        display: none;
+      }
+    }
+
+    .views-field-label {
+      h2 {
+        color: $clr-navy;
+        margin-bottom: rem(15);
+      }
+
+      .fi {
+        display: none;
+      }
+    }
+
+    .views-field-field-learning-path-description {
+      margin-bottom: rem(20);
+    }
+
+    .views-field-field-learning-path-category {
+      margin-bottom: 0;
+    }
+
+    .progress-wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-left: auto;
+      position: relative;
+
+      .dropdown {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: rem(-5);
+        z-index: 2;
+
+        .fi {
+          font-size: rem(27);
+        }
+      }
+
+      .status {
+        display: block;
+        margin-bottom: rem(10);
+        text-align: center;
+
+        &__icon {
+          margin: auto;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      min-width: rem(140);
+    }
+
+    .circle-progress {
+      display: block;
+      margin-bottom: rem(24);
+    }
+
+    .views-field-opigno-lp-progress {
+      display: none;
+    }
+  }
+}
+
+// Training card
+.training-card {
+  height: 100%;
+
+  .tc-body {
+    padding: rem(10) rem($grid-gutter-width / 2) rem(15);
+    background-color: $clr-theme-secondary;
+    margin-bottom: rem(15);
+  }
+
+  .tc-footer {
+    padding: 0 rem($grid-gutter-width / 2);
+  }
+
+  .learning-path-progress {
+    .progress-value {
+      color: $clr-theme-secondary;
+      font-weight: $font-weight-bold;
+    }
+
+    .progress-progress {
+      background: $clr-theme-success;
+    }
+  }
+
+  .views-field {
+    &-field-learning-path-media-image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &-field-learning-path-category {
+     font-size: rem($font-size-sm);
+      color: $clr-theme-primary;
+      margin-bottom: rem(6);
+    }
+
+    &-label {
+      text-transform: uppercase;
+      margin-bottom: rem(16);
+
+      h3 {
+       font-size: rem($font-size-base);
+        margin: 0;
+      }
+    }
+
+    &-field-learning-path-description {
+      margin-bottom: rem(16);
+      word-break: break-word;
+    }
+
+    &-opigno-lp-take-link {
+      .btn {
+        display: block;
+      }
+    }
+  }
+}
+
+// Filter block
+#catalog-filter {
+  @include media-breakpoint-down(md) {
+    background: $clr-white;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+
+    .fieldgroup {
+      margin-bottom: rem(20);
+    }
+
+    .form-submit {
+      margin: 0 auto;
+      max-width: rem(156);
+    }
+  }
+}
+
+
+.block.block-views-exposed-filter-blockopigno-training-catalog-training-catalogue {
+  padding: 0;
+  background-color: transparent;
+}
+
+.block-views-exposed-filter-blockopigno-training-catalog-training-catalogue {
+  $training-icons: (
+    '[id*="group-membership"]': 'eye',
+    '[id*="learning-path-category"]': 'categories',
+    '[id*="sort"]': 'clock',
+  );
+
+  .fieldset-legend {
+    @include icon-opigno-base(before);
+    position: relative;
+    padding-left: rem(50);
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: rem(-8);
+      font-size: rem(34);
+    }
+  }
+
+  @each $selector, $icon in $training-icons {
+    #{$selector} .fieldset-legend {
+      &:before {
+        content: map-get($icomoon, $icon);
+      }
+    }
+  }
+}
+

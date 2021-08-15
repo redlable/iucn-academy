@@ -1,0 +1,12 @@
+.block-system-branding-block {
+  margin-right: rem(20);
+
+  .logo,
+  .home-link {
+    display: block;
+  }
+
+  .logo {
+    max-width: rem(145);
+  }
+}

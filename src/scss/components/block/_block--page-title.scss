@@ -1,0 +1,33 @@
+.block-page-title-block {
+  h2 {
+    margin-bottom: rem(50);
+
+    @include media-breakpoint-down(md) {
+      font-size: rem(18);
+      font-weight: $font-weight-bold;
+      margin-bottom: rem(14);
+      text-align: center;
+    }
+  }
+}
+
+.filter-section-title {
+  margin: rem(20) 0;
+  position: relative;
+
+  .close-btn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    text-align: center;
+  }
+}

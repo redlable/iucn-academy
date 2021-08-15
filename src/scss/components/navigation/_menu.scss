@@ -1,0 +1,44 @@
+.main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: rem(20);
+    padding: 0 35px;
+
+    @include media-breakpoint-down(xl) {
+      font-size: rem(18);
+      padding: 0 24px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      font-size: rem(25);
+      margin-bottom: rem(100);
+    }
+  }
+
+  &__link {
+    color: $clr-navy;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: $clr-navy;
+      text-decoration: none;
+    }
+
+    &.is-active {
+      color: $clr-navy;
+    }
+  }
+}

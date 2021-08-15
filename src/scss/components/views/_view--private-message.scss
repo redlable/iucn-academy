@@ -1,0 +1,123 @@
+// Views.
+.view-private-message {
+  &.view-display-id {
+    &-block_all {
+      .private-message-thread {
+        &:before {
+          //@todo: Added mixins or class for decoration element.
+          content: '';
+          display: block;
+          width: rem(50);
+          position: absolute;
+          left: rem(0);
+          bottom: rem(-30);
+          border-bottom: 1px solid $clr-content-text;
+        }
+      }
+
+      .views-row {
+        @include icon-opigno(chevron-right-thin);
+        position: relative;
+        margin-bottom: rem(50);
+        padding-right: rem(20);
+
+        &:before {
+          position: absolute;
+          right: rem(12);
+          top: 50%;
+          transform: translate(100%, -50%);
+          font-size: rem(36);
+          opacity: 0;
+        }
+
+        &:hover {
+          color: $clr-content-link-active;
+          cursor: pointer;
+
+          &:before {
+            opacity: 1;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: rem(30);
+
+          .private-message-thread:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-block_dashboard {
+      .item-list ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          position: relative;
+          margin-bottom: rem(25);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &:hover {
+            color: $clr-content-link-active;
+          }
+        }
+      }
+
+      .username a {
+        pointer-events: none;
+        color: inherit;
+      }
+
+      .views-field {
+        &-view-private-message-thread {
+          a {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-indent: 101%;
+            overflow: hidden;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .pagination {
+    margin: 0;
+  }
+
+  .item-list {
+    li {
+      margin-bottom: rem(25);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-content {
+      display: block;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// Views block.
+.block-views-blockprivate-message-block-all {
+  .block-title:before {
+    content: map-get($icomoon, comment);
+  }
+}

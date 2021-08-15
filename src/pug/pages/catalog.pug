@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Catalogue';
+  - var description = '';
+  - var pageClass = 'catalog-page';
+  - var pageID = 'catalog';
+
+block content
+  .block-page-title-block
+    h2= title
+
+  .row
+    .col-left.col-lg-3.col-md-12#sidebar-first
+      .region.region-sidebar_first
+        include ../includes/modules/exposed-form
+
+    .col-right.col-lg-9.col-md-12
+      .content-wrapper
+        .region.region-content
+          .block-system_main_block
+            .views-element-container.contextual-region
+              .contextual-region.style-block.view.view-opigno-training-catalog.view-id-opigno_training_catalog.view-display-id-training_catalogue
+                .view-content
+                  - var img = 'images/content/photo2.png'
+                  - var title = 'Preserve out forest'
+                  - var category = 'category__yellow'
+                  include ../includes/modules/learning-path/learning-path-item
+
+                  - var progressNumber = '0'
+                  - var img = 'images/content/photo1.png'
+                  - var title = 'Green energy production'
+                  - var category = 'category__yellow'
+                  include ../includes/modules/learning-path/learning-path-item
+
+                  - var progressNumber = '24'
+                  - var img = 'images/content/Groupe-de-masques.png'
+                  - var title = 'Document your environnement'
+                  - var category = 'category__blue'
+                  include ../includes/modules/learning-path/learning-path-item

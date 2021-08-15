@@ -1,0 +1,41 @@
+block content
+  - var L = 2 * 3.14 * radius
+  - var dashOffset = L - (L * progressNumber) / 100
+  - var dashArray = progressNumber * 3.14 * radius / 100
+
+  if status === 'failed'
+    .status
+      .status__icon.failed
+        i.fi.fi-rr-cross
+      .status__content
+        .status__text Failed
+        .status__completed Completed on xx/xx/xxx
+  else if status === 'passed'
+    .status
+      .status__icon.passed
+        i.fi.fi-rr-check
+      .status__content
+        .status__text Passed
+        .status__completed Completed on xx/xx/xxx
+  else if progressNumber
+    .circle-progress
+      svg(
+        height= radius * 2
+        width= radius * 2
+        viewBox= 0 + ' ' + 0 + ' ' + radius * 2 + ' ' + radius * 2
+      )
+        circle(
+          cx= radius
+          cy= radius
+          r= radius
+        )
+        circle(
+          cx= radius
+          cy= radius
+          r= radius / 2
+          stroke-width= radius
+          stroke-dasharray= dashArray + ' ' + L
+          transform= 'rotate(-90) translate(-' + radius * 2 + ')'
+        )
+
+      span.progress-number= progressNumber + '%'

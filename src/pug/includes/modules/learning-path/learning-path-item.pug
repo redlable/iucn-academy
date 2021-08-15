@@ -1,0 +1,29 @@
+block content
+  .group-member.views-row
+    a.not-take-link-wrapper(href="#")
+    .fields-content.is-member
+      .top-wrapper(class=(category))
+        .views-field.views-field-field-learning-path-media-image
+          .field-content
+            img(src=img alt="img")
+
+      .body-wrapper
+        .text-wrapper
+          .views-field.views-field-label
+            h6.field-content= title
+
+        .progress-wrapper
+          if progressNumber > 0
+            - var radius = 15
+            include ../progress/circle-progress
+
+          .views-field.views-field-opigno-lp-take-link
+            span.field-content
+              if !progressNumber
+                a.btn.btn-rounded.use-ajax.continue-link(href="#") Learn more
+              else if progressNumber === '0'
+                a.btn.btn-rounded.use-ajax.continue-link(href="#") Start
+              else if progressNumber === '100' || progressNumber === 'passed' || progressNumber === 'failed'
+                a.btn.btn-rounded.use-ajax.continue-link(href="#") Restart
+              else if progressNumber
+                a.btn.btn-rounded.use-ajax.continue-link(href="#") Continue

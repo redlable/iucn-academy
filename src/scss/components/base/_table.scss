@@ -1,0 +1,290 @@
+table {
+  border-collapse: collapse;
+  font-size: rem(14);
+  text-align: left;
+  width: 100%;
+}
+
+thead {
+  border-bottom: 1px solid $clr-navy;
+}
+
+th,
+td {
+  display: table-cell !important;
+  padding: rem(6) rem(25);
+}
+
+tr.training {
+  display: table-row;
+}
+
+th {
+  font-weight: $font-weight-bold;
+}
+
+tbody {
+  tr {
+    border-bottom: 1px solid $clr-gray-light-D5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+td {
+  height: rem(50);
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+}
+
+.trainings-list-wrapper {
+  @include media-breakpoint-down(sm) {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.statistics-table {
+  tr {
+    background: none !important;
+  }
+
+  th,
+  td {
+    background: none;
+    border: none;
+    vertical-align: middle;
+
+    &.progress {
+      display: table-cell;
+      height: auto;
+      overflow: visible;
+      line-height: normal;
+      font-size: inherit;
+      border-radius: 0;
+    }
+  }
+
+  thead {
+    th {
+      border-bottom: 1px solid $clr-navy;
+    }
+  }
+
+  td {
+    &.name {
+      width: 31%;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      text-align: right;
+    }
+  }
+
+  .learning-path-progress {
+    .progress-bar {
+      height: rem(2);
+    }
+
+    .progress-value {
+      display: inline-block;
+      font-size: rem(16);
+      font-weight: $font-weight-normal;
+      margin-bottom: rem(3);
+      vertical-align: top;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .btn-rounded {
+    font-weight: $font-weight-bold;
+    min-height: rem(30);
+    padding: 0 rem(10);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .content-box:not(.skills-list):not(.trainings-list):not(.users-results):not(.training-content) {
+    .statistics-table {
+      border-collapse: separate;
+      border-spacing: 0 rem(10);
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        border: none;
+      }
+
+      td {
+        background: $clr-gray-light;
+        border: none;
+        padding: rem(10);
+
+        &.name {
+          width: auto;
+        }
+
+        &.progress {
+          display: none;
+        }
+
+        &.status {
+          span:not([class]) {
+            display: none;
+          }
+        }
+
+        &:first-child {
+          border-top-left-radius: rem(10);
+          border-bottom-left-radius: rem(10);
+        }
+
+        &:last-child {
+          border-top-right-radius: rem(10);
+          border-bottom-right-radius: rem(10);
+          padding-right: rem(20);
+        }
+      }
+
+      .btn-rounded {
+        min-width: 0;
+        padding: 0 rem(20);
+      }
+    }
+  }
+}
+
+.skills-list,
+.training-content {
+  .learning-path-progress,
+  .learning-path-progress {
+    width: rem(120);
+  }
+
+  .skill {
+    width: 44%;
+  }
+
+  .progress {
+    width: rem(170);
+  }
+
+  td {
+    &:last-child {
+      padding-right: rem(25);
+    }
+
+    &.score,
+    &.progress {
+      text-align: right;
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .icon_state {
+    .fi {
+      font-size: rem(20);
+      height: rem(31);
+      margin-right: rem(12);
+      width: rem(31);
+    }
+  }
+
+  .icon_state_pending {
+    .fi {
+      font-size: rem(17);
+    }
+  }
+
+  .details-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .details-btn {
+    color: $clr-navy;
+    text-decoration: none;
+
+    .fi {
+      font-size: rem(25);
+    }
+
+    .fi-rr-eye {
+      font-size: rem(30);
+    }
+  }
+}
+
+.training-content {
+  th,
+  td,
+  td.score,
+  td.time {
+    text-align: center;
+  }
+
+  .step {
+    text-align: left;
+  }
+}
+
+.trainings-list,
+.users-results {
+  th,
+  td {
+    &.users,
+    &.completed,
+    &.score,
+    &.passed,
+    &.time {
+      text-align: center;
+    }
+  }
+}
+
+.users-results {
+  th.score {
+    text-align: left;
+  }
+
+  td.score {
+    text-align: right;
+  }
+}
+
+.skills-list-wrapper,
+.training-list-wrapper,
+.training-content-wrapper,
+.user-results-wrapper {
+  overflow-x: auto;
+}
+
+.activity-table {
+  background: $clr-gray-light;
+  border-radius: rem(10);
+  padding: rem(5) rem(20);
+
+  table {
+    color: $clr-navy;
+    margin-bottom: 0;
+  }
+
+  td {
+    &.name {
+      width: auto;
+    }
+  }
+}

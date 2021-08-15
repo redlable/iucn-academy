@@ -1,0 +1,80 @@
+.learning-path-progress {
+  .progress-bar {
+    background-color: $clr-gray-light-D5;
+    border-radius: rem(6);
+    height: rem(5);
+    width: 100%;
+  }
+
+  .progress-progress {
+    background-color: $clr-green;
+    height: 100%;
+  }
+
+  .progress-value {
+    color: $clr-navy;
+    font-size: rem(20);
+    font-weight: $font-weight-black;
+    margin-bottom: rem(6);
+    text-align: right;
+  }
+}
+
+.lp-global-progress {
+  align-items: center;
+  display: flex;
+
+  .learning-path-progress {
+    align-items: center;
+    flex-direction: row !important;
+  }
+
+  .lp-global-progress-title {
+    margin-right: rem(37);
+  }
+
+  .progress-wrapper {
+    flex: 1 0 auto;
+  }
+
+  .progress-bar {
+    background-color: $clr-navy;
+    border-radius: rem(10);
+    height: 10px;
+    overflow: hidden;
+  }
+
+  .progress-value {
+    font-size: rem(14);
+    font-weight: $font-weight-bold;
+    margin: 0 0 0 rem(42);
+  }
+}
+
+.circle-progress {
+  circle {
+    width: 100%;
+    height: 100%;
+
+    &:first-child {
+      fill: $clr-gray-light;
+      stroke-width: 0;
+    }
+
+    /* Formula
+     * L=2πR
+     * L - (L * percent) / 100
+     */
+    &:nth-child(2) {
+      fill: transparent;
+      stroke: $clr-blue;
+    }
+  }
+
+  .progress-number {
+    font-size: rem(16);
+    fill: $clr-navy;
+    font-weight: $font-weight-bold;
+    margin-left: rem(10);
+  }
+}
