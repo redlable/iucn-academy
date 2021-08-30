@@ -1,15 +1,16 @@
 .views-exposed-form {
   .form-group {
+    margin-bottom: rem(10);
     padding: 0;
-
-    legend {
-      font-size: rem($font-size-base);
-      color: $clr-block-title;
-    }
 
     .form-item {
       margin: 0;
     }
+  }
+
+  legend {
+    font-size: rem(24);
+    color: $clr-navy;
   }
 
   .form-item {
@@ -186,6 +187,8 @@
   }
 
   .btn-reset-filter {
+    border-radius: rem(10);
+
     @include media-breakpoint-down(md) {
       display: none;
     }

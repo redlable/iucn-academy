@@ -77,13 +77,15 @@ module.exports = {
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: 'fonts/'
+        outputPath: 'fonts/',
+        publicPath: '../fonts/'
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: `images/[folder]/[name].[ext]`
+        name: `images/[folder]/[name].[ext]`,
+        publicPath: '../'
       }
     }, {
       test: /\.scss$/,

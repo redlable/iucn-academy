@@ -344,6 +344,8 @@
 
 // Filter block
 #catalog-filter {
+  margin-bottom: rem(50);
+
   @include media-breakpoint-down(md) {
     background: $clr-white;
     display: none;
@@ -351,6 +353,7 @@
     left: 0;
     top: 0;
     height: 100%;
+    margin: 0;
     width: 100%;
     z-index: 5;
 

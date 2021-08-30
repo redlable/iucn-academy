@@ -6,7 +6,7 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
   // BUILD config
   mode: 'production',
   output: {
-    publicPath: '../',
+    publicPath: './',
   },
   plugins: [
     new CleanWebpackPlugin()
