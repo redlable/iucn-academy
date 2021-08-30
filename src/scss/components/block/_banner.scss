@@ -1,0 +1,39 @@
+.banner {
+  &__container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: rem(50) 0;
+
+    @include media-breakpoint-up(sm) {
+      padding: rem(80) 0;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: rem(130) 0 rem(200);
+    }
+  }
+
+  .login-form-wrapper {
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+      margin-left: 10%;
+    }
+  }
+
+  h1 {
+    font-size: rem(56);
+    color: $clr-white;
+    margin-bottom: rem(50);
+    text-align: center;
+
+    @include media-breakpoint-up(xl) {
+      font-size: rem(68);
+    }
+
+    @include media-breakpoint-up(xxl) {
+      font-size: rem(73);
+    }
+  }
+}

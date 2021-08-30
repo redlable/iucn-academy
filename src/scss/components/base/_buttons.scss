@@ -9,10 +9,10 @@
   user-select: none;
   box-shadow: none;
   background-color: $clr-gray-light;
-  border-radius: rem(10);
+  border-radius: rem(5);
   border: 0 none;
-  min-height: rem(49);
-  min-width: rem(280);
+  min-height: rem(44);
+  //min-width: rem(280);
   outline: none;
   transition: .3s ease-out;
   text-decoration: none;
@@ -57,11 +57,11 @@
 .btn-rounded {
   background-color: $clr-white;
   border: 1px solid $clr-blue;
-  border-radius: rem(10);
+  border-radius: rem(5);
   font-weight: $font-weight-bold;
   justify-content: center;
   min-height: rem(40);
-  min-width: rem(156);
+  min-width: rem(163);
   padding: rem(10) rem(15);
 }
 

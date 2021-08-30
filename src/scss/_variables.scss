@@ -21,6 +21,7 @@ $gray-700: #575756;
 $clr-navy: #003478;
 $clr-navy-dark: #2F3758;
 $clr-blue: #0098C3;
+$clr-blue-light: #F3FCFF;
 $clr-green-light: #A4E9D7;
 $clr-green: #4AD3B0;
 $clr-green-dark: #43B598;
@@ -96,7 +97,7 @@ $font-weight-lighter: lighter;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-weight-black: 800;
+$font-weight-black: 900;
 $font-weight-bolder: bolder;
 
 // 2.1 Link
@@ -147,8 +148,8 @@ $input-btn-border-width: 0;
 
 
 // 4.1 Button
-$btn-padding-y: 13;
-$btn-padding-x: 10;
+$btn-padding-y: 10;
+$btn-padding-x: 20;
 $btn-mini-width: 100;
 $btn-line-height: 1;
 $btn-font-size: $input-btn-font-size-sm;

@@ -1,8 +1,7 @@
 .page-footer {
   background: $clr-black-17;
   font-size: rem(14);
-  padding-top: rem(196);
-  margin-top: rem(120);
+  padding-top: rem(170);
 
   .footer-content {
     background: $clr-white;
@@ -11,19 +10,19 @@
   }
 
   .block-system-branding-block {
-    margin-right: rem(110);
-
-    @include media-breakpoint-down(xl) {
-      margin-right: rem(80);
-    }
-
-    @include media-breakpoint-down(lg) {
-      margin-right: rem(40);
-    }
+    margin-right: rem(60);
 
     @include media-breakpoint-down(xs) {
       margin: 0 0 rem(20);
     }
+
+    .logo {
+      max-width: rem(80);
+    }
+  }
+
+  nav {
+    flex: 1 0 auto;
   }
 
   .footer-menu {

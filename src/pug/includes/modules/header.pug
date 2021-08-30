@@ -4,7 +4,7 @@ header.page-header(role="banner")
       .col-lg-9.col-left
         .region.region-branding
           .block-system-branding-block
-            a.home-link(href="#")
+            a.home-link(href="/")
               img.logo(src="images/design/logo.png")
 
         .region-main-menu
@@ -18,19 +18,17 @@ header.page-header(role="banner")
         .mobile-header-wrapper
           .mobile-header
             include main-menu
-            include block-notifications
-            include block-profile
 
-            ul.user-menu-list
-              li.user-menu-item
-                a.user-menu-item-text(href="#")
-                  i.fi.fi-rr-settings
-                  | Settings
-              li.user-menu-item.logout
-                a.user-menu-item-text(href="#")
-                  i.fi.fi-rr-sign-out
-                  | Logout
+            //ul.user-menu-list
+            //  li.user-menu-item
+            //    a.user-menu-item-text(href="#")
+            //      i.fi.fi-rr-settings
+            //      | Settings
+            //  li.user-menu-item.logout
+            //    a.user-menu-item-text(href="#")
+            //      i.fi.fi-rr-sign-out
+            //      | Logout
 
       .col-lg-3.col-right
-        include block-profile
-        include block-notifications
+        .sign-up
+          a.btn.btn-bg(href="#") Sign up now

@@ -1,0 +1,56 @@
+form.user-login-form(action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8")
+  .js-form-item.form-item.js-form-type-textfield.form-item-name.js-form-item-name
+
+    input.form-text.required(
+      autocorrect="none"
+      autocapitalize="none"
+      spellcheck="false"
+      autofocus="autofocus"
+      data-drupal-selector="edit-name"
+      aria-describedby="edit-name--description"
+      type="text"
+      id="edit-name"
+      name="name"
+      value=""
+      size="60"
+      maxlength="60"
+      required="required"
+      aria-required="true"
+      placeholder="Email address"
+    )
+
+  .js-form-item.form-item.js-form-type-password.form-item-pass.js-form-item-pass
+    input.form-text.required(
+      autocorrect="none"
+      autocapitalize="none"
+      spellcheck="false"
+      autofocus="autofocus"
+      data-drupal-selector="edit-pass"
+      aria-describedby="edit-pass--description"
+      type="password"
+      id="edit-pass"
+      name="pass"
+      value=""
+      size="60"
+      maxlength="60"
+      required="required"
+      aria-required="true"
+      placeholder="Password"
+    )
+
+  div.reset-password
+    a(href="#") Reset your password
+
+  .form-actions.js-form-wrapper.form-wrapper#edit-actions
+    input.button.js-form-submit.form-submit(
+      type="submit"
+      id="edit-submit"
+      name="op"
+      value="Sign in"
+    )
+
+  div.divider
+    span or
+
+  div.sing-up
+    a(href="#") Sign up

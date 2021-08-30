@@ -1,0 +1,42 @@
+.slick-dots {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .slick-active {
+    button {
+      background: $clr-navy;
+    }
+  }
+
+  button {
+    background: $clr-blue;
+    border-radius: 50%;
+    border: none;
+    height: rem(12);
+    margin: rem(2) rem(5);
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: rem(12);
+  }
+}
+
+.slick-arrow {
+  background: none;
+  border: none;
+  color: $clr-blue;
+  font-size: rem(24);
+  margin: 0 rem(15);
+  padding: 0;
+}
