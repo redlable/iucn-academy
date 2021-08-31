@@ -43,6 +43,7 @@ import 'bootstrap-select'
   $('.show-filter').on('click', function(e) {
     e.preventDefault();
     $body.addClass('open-filter');
+    window.scrollTo({ top: 0 });
     $('#catalog-filter').fadeIn();
   });
 
@@ -59,6 +60,7 @@ import 'bootstrap-select'
   }, function(isTrue) {
     if (isTrue) {
       $('#catalog-filter').removeAttr('style');
+      $body.removeClass('open-filter')
     }
   });
 

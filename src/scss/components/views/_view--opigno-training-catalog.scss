@@ -94,8 +94,40 @@
     border-bottom: rem(10) solid $clr-blue;
   }
 
-  .category__green {
+  .category__blue-dark {
+    border-bottom: rem(10) solid $clr-blue-dark;
+  }
+
+  .category__green-forest {
     border-bottom: rem(10) solid $clr-green-forest;
+  }
+
+  .category__violete {
+    border-bottom: rem(10) solid $clr-violete;
+  }
+
+  .category__orange {
+    border-bottom: rem(10) solid $clr-orange;
+  }
+
+  .category__red {
+    border-bottom: rem(10) solid $clr-red;
+  }
+
+  .category__navy {
+    border-bottom: rem(10) solid $clr-navy;
+  }
+
+  .category__green-forest-dark {
+    border-bottom: rem(10) solid $clr-green-forest-dark;
+  }
+
+  .category__blue-light {
+    border-bottom: rem(10) solid $clr-blue-light;
+  }
+
+  .category__gray-light-BD {
+    border-bottom: rem(10) solid $clr-gray-light-BD;
   }
 
   .views-field-field-learning-path-media-image {
@@ -106,6 +138,7 @@
   .body-wrapper {
     display: flex;
     flex-direction: column;
+    flex: 1 0 auto;
     justify-content: flex-end;
     padding: rem(13) rem(10) rem(10) rem(20);
 
@@ -124,6 +157,7 @@
   .text-wrapper {
     display: flex;
     flex-direction: column;
+    margin-bottom: auto;
     width: 100%;
 
     @include media-breakpoint-down(md) {
@@ -352,6 +386,9 @@
     position: absolute;
     left: 0;
     top: 0;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding: 0 3px rem(20);
     height: 100%;
     margin: 0;
     width: 100%;
