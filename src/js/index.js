@@ -72,4 +72,8 @@ import 'bootstrap-select'
     });
   });
 
+  $('.user-login-form .form-submit').on('click', function(e) {
+    e.preventDefault()
+  })
+
 }(jQuery));

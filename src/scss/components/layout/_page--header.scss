@@ -36,7 +36,7 @@
     justify-content: space-between;
 
     @include media-breakpoint-down(md) {
-      display: none;
+      //display: none;
     }
   }
 
@@ -273,9 +273,18 @@
   right: rem(70);
   z-index: 10;
 
+  @include media-breakpoint-down(md) {
+    right: 0;
+  }
+
   .btn {
     box-shadow: 0 3px 6px rgba($clr-black, .3);
     font-size: rem(20);
     text-transform: uppercase;
+
+    @include media-breakpoint-down(sm) {
+      font-size: rem(14);
+      padding: rem(10);
+    }
   }
 }

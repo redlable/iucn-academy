@@ -8,6 +8,17 @@ body {
   font-size: rem($font-size-base);
   line-height: $line-height-base;
   margin: 0;
+
+  // Style external iframe in modal
+  > iframe {
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
 }
 
 h1,
@@ -57,13 +68,13 @@ h6 {
 }
 
 a {
-  color: $clr-navy;
+  color: $clr-blue;
   text-decoration: $link-decoration;
   transition: color .3s ease-out;
   -webkit-tap-highlight-color: transparent;
 
   &:hover {
-    color: $clr-navy;
+    color: $clr-blue;
     text-decoration: $link-hover-decoration;
   }
 }

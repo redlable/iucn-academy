@@ -1,20 +1,14 @@
 .paragraph {
   margin-bottom: rem(30);
 
-  @include media-breakpoint-up(md) {
-    margin-bottom: rem(50);
-  }
-
   &__top-banner {
 
   }
 
   &__text {
-    line-height: 1.9;
-
     h2 {
       font-size: rem(30);
-      margin-bottom: 0;
+      margin-bottom: rem(30);
 
       @include media-breakpoint-up(md) {
         font-size: rem(48);
@@ -29,19 +23,25 @@
     }
 
     .image {
-      flex: 1 1 0%;
+      flex: 1 1 rem(377);
       margin-bottom: rem(20);
 
       @include media-breakpoint-up(md) {
         margin-bottom: 0;
-        padding-right: rem(20);
+        padding-right: rem(30);
       }
     }
 
     .text {
-      flex: 2 1 0%;
-      line-height: 1.9;
-      transform: translateY(-7px);
+      flex: 1 1 calc(100% - 377px);
+
+      h4 {
+        margin: rem(20) 0 rem(25);
+      }
+
+      h6 {
+        margin: rem(25) 0 0;
+      }
 
       p {
         &:last-child {

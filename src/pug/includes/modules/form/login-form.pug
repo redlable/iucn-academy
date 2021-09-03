@@ -47,10 +47,12 @@ form.user-login-form(action="/user/login" method="post" id="user-login-form" acc
       id="edit-submit"
       name="op"
       value="Sign in"
+      data-toggle="modal"
+      data-target="#register-form"
     )
 
   div.divider
     span or
 
   div.sing-up
-    a(href="#") Sign up
+    a(href="#" data-toggle="modal" data-target="#register-form") Sign up

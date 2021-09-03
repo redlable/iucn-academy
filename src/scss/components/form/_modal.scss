@@ -257,3 +257,37 @@
     }
   }
 }
+
+#contact-us {
+  .modal-dialog {
+    max-width: rem(580);
+  }
+
+  .modal-content {
+    padding: rem(50) rem(140);
+  }
+
+  .modal-header {
+    justify-content: flex-start;
+    margin-bottom: rem(50);
+  }
+
+  .modal-title {
+    font-size: rem(36);
+  }
+
+  .modal-body {
+    color: $clr-navy;
+    font-size: rem(24);
+  }
+
+  .address {
+    margin-bottom: rem(30);
+  }
+}
+
+#register-form {
+  .modal-dialog {
+    max-width: rem(890);
+  }
+}
